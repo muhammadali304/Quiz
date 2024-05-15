@@ -131,5 +131,24 @@ console.log("\n")
 
 console.log(`Total Score: ${score}/${quiz.length}`)
 console.log(`Percentage: ${percentage}%`)
-console.log(`Your Grade : ${grade}`)
-console.log(`Your Status : ${status}`)
+if (grade === "A+") {
+    console.log(chalk.greenBright(`Your Grade: ${grade}`));
+} else if (grade === "A"){
+    console.log(chalk.greenBright(`Your Grade: ${grade}`));
+} else if (grade === "B"){
+    console.log(chalk.green(`Your Grade: ${grade}`));
+} else if (grade === "C"){
+    console.log(chalk.green(`Your Grade: ${grade}`));
+} else if (grade === "D"){
+    console.log(chalk.yellow(`Your Grade: ${grade}`));
+} else if (grade === "E"){
+    console.log(chalk.yellow(`Your Grade: ${grade}`));
+} else if (grade === "F"){
+    console.log(chalk.redBright(`Your Grade: ${grade}`));
+}
+
+if (status === "Pass") {
+    console.log(chalk.greenBright(`Your Status: ${status}`))
+} else {
+    console.log(chalk.redBright(`Your Status: ${status}`))
+}
