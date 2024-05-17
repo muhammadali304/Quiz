@@ -5,7 +5,15 @@ async function name() {
     const input = await inquirer.prompt({
         name: "name",
         type: "input",
-        message: "Enter your Name:"
+        message: "Enter your Name:",
+        validate: ((value) => {
+            if (value === "") {
+                return ("Please Enter Your Name");
+            }
+            else {
+                return true;
+            }
+        })
     });
     console.log("\n");
     console.log(chalk.blue.bold.italic.underline(`##### WELCOME ${input.name} TO THE QUIZ! #####`));

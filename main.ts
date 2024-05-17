@@ -8,7 +8,14 @@ async function name() : Promise <void> {
         {
             name : "name",
             type : "input",
-            message : "Enter your Name:"
+            message : "Enter your Name:",
+            validate : ((value) => {
+                if (value === "") {
+                    return ("Please Enter Your Name") 
+                } else {
+                    return true;
+                }
+            })
         }
     ) 
     console.log("\n")
